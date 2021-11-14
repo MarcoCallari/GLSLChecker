@@ -4,3 +4,4 @@
 .clang_complete
 *.pro.user
 build_lib
+build/

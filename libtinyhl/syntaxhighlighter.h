@@ -3,6 +3,7 @@
 #include <QTextCharFormat>
 #include <unordered_map>
 #include <memory>
+#include <stdexcept>
 
 namespace glsl {
 	//! GLSLの各キーワードをハイライトする
