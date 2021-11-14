@@ -20,6 +20,5 @@ file(GLOB jsonfiles
 foreach(file IN LISTS jsonfiles)
     add_custom_command(
                 TARGET GLSLChecker POST_BUILD
-                COMMAND ${CMAKE_COMMAND} -E copy_if_different ${file} $<TARGET_FILE_DIR:GLSLChecker>
-                COMMENT "Copying ${file} to ${CMAKE_CURRENT_BINARY_DIR}\n")
+                COMMAND ${CMAKE_COMMAND} -E copy_if_different ${file} $<TARGET_FILE_DIR:GLSLChecker>)
 endforeach()
