@@ -3,19 +3,24 @@ GLSLChecker
 GLSL language syntax highlighter & compile error checker
 
 ## Screen Shots
-![ScreenShot_0](/screenshots/screen_shot0.png "screen shot 0")
+![ScreenShot_0](/screenshots/screen_shot0.png "screen shot 0") 
+
 syntax highlighting.
+
 ![ScreenShot_1](/screenshots/screen_shot1.png "screen shot 1")
+
 the compiler error message is printed below.
 
 ## Build
-this program depends Qt 5.2.1 library.
+The only dependency is the Qt library. Minimum version is 5.2, but it works with newer version as well (I personally compile it with Qt 5.15.2).
+Compiling:
 ```bash
-	$ qmake where/to/path/GLSLChecker.pro -r
-	$ make
+	$ mkdir build
+	$ cd build
+	$ cmake -DCMAKE_PREFIX_PATH="[QT_PATH]\5.15.2\msvc2019_64\lib\cmake" ..
+	$ cmake --build .
 ```
-you can get Qt 5.2.1 library from here:
-https://qt-project.org/downloads
+The CMAKE_PREFIX_PATH variable should be changed accordingly. 
 
 ## License
 MIT License
